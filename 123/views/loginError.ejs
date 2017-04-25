@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>登录</title>
+    <title>Title</title>
     <style>
         .container{
             width: 300px;
@@ -11,7 +11,7 @@
             position: relative;
             margin: 0 auto;
         }
-        #username,#password{
+        #username,#password,#username1{
             width:200px;
             height:30px;
             font-size: 14px;
@@ -19,12 +19,16 @@
             background-color:rgb(224,224,224);
             outline:none;
         }
-        #username{
+        #username1{
             top:100px;
             left:50px;
         }
-        #password{
+        #username{
             top:150px;
+            left:50px;
+        }
+        #password{
+            top:200px;
             left:50px;
         }
         .forget{
@@ -51,12 +55,12 @@
 <body>
 <form action="loginSucess" method="post" class="container">
 
-    <input type="text" id="username" name="username" placeholder="请输入已验证手机/邮箱">
-    <input type="password" id="password" name="password" placeholder="请输入密码">
-    <a href="./loginError"><div class="forget">忘记密码</div></a>
-    <input type="submit" value="登录" id="login">
+    <input type="username" id="username1" name="username1" placeholder="输入账号">
+    <input type="password" id="username" name="username" placeholder="修改密码">
+    <input type="password" id="password" name="password" placeholder="确认密码">
+
+    <input type="submit" value="保存" id="login">
 
 </form>
-
 </body>
 </html>

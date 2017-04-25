@@ -1,3 +1,4 @@
+
 /**
  * Created by dllo on 17/4/24.
  */
@@ -15,7 +16,7 @@ var options = {
 var pool = mysql.createPool(options);
 
 //创建路由的步骤
-    //1.引入express
+//1.引入express
 var express = require('express');
 //2.通过express 创建路由
 var router = express.Router();
@@ -36,12 +37,16 @@ router.post('/',function (req,res) {
         }else{
             if(login.username == results[0].username && login.password == results[0].password){
                 res.send('登录成功');
-            //   username:admin password:123
+                //   username:admin password:123
             }else{
                 res.send('登录失败');
             }
         }
     });
+    var updateSQL = 'update h161217 SET age = 20 where name="李青"';
+    connection.query(updateSQL,function (error) {
+        handleError(error,'更新');
+    })
 
 });
 //4.模块导出 路由

@@ -10,6 +10,9 @@ var users = require('./routes/users');
 var view1 = require('./routes/1');
 var view2 = require('./routes/login');
 var view3 = require('./routes/loginSucess');
+var view4 = require('./routes/loginError');
+var view5 = require('./routes/loginChange');
+
 
 var app = express();
 
@@ -30,6 +33,8 @@ app.use('/users', users);
 app.use('/1',view1);
 app.use('/login',view2);
 app.use('/loginSucess',view3);
+app.use('/loginError',view4);
+app.use('/loginChange',view4);
 
 
 // catch 404 and forward to error handler
